@@ -1,0 +1,120 @@
+﻿@page
+@model PhucPhuongCare.Areas.Identity.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .image-panel {
+            background-image: url('/images/Bsi.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-5xl mx-auto flex flex-col lg:flex-row bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+        <div class="w-full lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center">
+
+            <header class="mb-8 text-center lg:text-left">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Chào mừng trở lại!</h1>
+                <p class="mt-2 text-gray-500">Vui lòng đăng nhập để truy cập hệ thống.</p>
+            </header>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-red-500 text-sm mb-4"></div>
+
+                <div class="mb-5 relative">
+                    <label asp-for="Input.Email" class="block mb-2 text-sm font-medium text-gray-600"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <i class="fa-solid fa-envelope text-gray-400"></i>
+                        </span>
+                        <input asp-for="Input.Email" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="email@example.com" />
+                        <span asp-validation-for="Input.Email" class="text-red-500 text-sm"></span>
+                    </div>
+                </div>
+
+                <div class="mb-6 relative">
+                    <label asp-for="Input.Password" class="block mb-2 text-sm font-medium text-gray-600"></label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <i class="fa-solid fa-lock text-gray-400"></i>
+                        </span>
+                        <input asp-for="Input.Password" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="••••••••" />
+                        <span asp-validation-for="Input.Password" class="text-red-500 text-sm"></span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input asp-for="Input.RememberMe" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" />
+                        <label asp-for="Input.RememberMe" class="ml-2 block text-sm text-gray-900"></label>
+                    </div>
+                    <div class="text-sm">
+                        <a asp-page="./ForgotPassword" class="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Quên mật khẩu?</a>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                        Đăng nhập
+                    </button>
+                </div>
+            </form>
+
+            <div class="my-6 flex items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="mx-4 text-sm text-gray-400">hoặc</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <div>
+                <button type="button" class="w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                    <img class="w-5 h-5 mr-2" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google icon" />
+                    Đăng nhập với Google
+                </button>
+            </div>
+
+            <p class="mt-8 text-center text-sm text-gray-600">
+                Chưa có tài khoản?
+                <a asp-page="./Register" class="font-medium text-indigo-600 hover:text-indigo-500 hover:underline">Đăng ký ngay</a>
+            </p>
+        </div>
+
+        <div class="hidden lg:block w-full lg:w-1/2 image-panel relative">
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-12">
+                
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>

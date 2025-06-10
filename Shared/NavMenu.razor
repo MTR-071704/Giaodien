@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        
+        <AuthorizeView>
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="my-appointments">
+                        <span class="oi oi-calendar" aria-hidden="true"></span> Lịch hẹn của tôi
+                    </NavLink>
+                </div>
+
+                <AuthorizeView Roles="Admin">
+                    <Authorized Context="adminContext">
+                        <hr />
+                        <div class="nav-item px-3 text-uppercase small text-muted">Quản trị</div>
+
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="admin/doctors">
+                                <span class="oi oi-person" aria-hidden="true"></span> Quản lý Bác sĩ
+                            </NavLink>
+                        </div>
+
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="admin/appointments">
+                                <span class="oi oi-calendar" aria-hidden="true"></span> Quản lý Lịch hẹn
+                            </NavLink>
+
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="services">
+                                <span class="oi oi-briefcase" aria-hidden="true"></span> Dịch vụ
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="appointments/book">
+                                <span class="oi oi-calendar" aria-hidden="true"></span> Đặt lịch hẹn
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="appointments/my">
+                                <span class="oi oi-check" aria-hidden="true"></span> Lịch của tôi
+                            </NavLink>
+                        </div>
+
+                        <!-- Đăng nhập / Đăng ký -->
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Identity/Account/Login">
+                                <span class="oi oi-account-login" aria-hidden="true"></span> Đăng nhập
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Identity/Account/Register">
+                                <span class="oi oi-plus" aria-hidden="true"></span> Đăng ký
+                            </NavLink>
+                        </div>
+                        <div class="nav-item px-3">
+                            <NavLink class="nav-link" href="Identity/Account/Register">
+                                <span class="oi oi-plus" aria-hidden="true"></span> Liên hệ
+                            </NavLink>
+                        </div>
+                    </Authorized>
+                </AuthorizeView>
+            </Authorized>
+        </AuthorizeView>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task Logout()
+    {
+        await JS.InvokeVoidAsync("window.location.replace", "/logged-out");
+    }
+}

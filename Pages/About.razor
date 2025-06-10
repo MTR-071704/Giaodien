@@ -1,0 +1,1361 @@
+﻿@page "/about"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Về Chúng Tôi - HealthScheduler</PageTitle>
+
+@* ===== HEADER VÀ THANH ĐIỀU HƯỚỚNG (GIỮ NGUYÊN ĐỂ ĐỒNG BỘ) ===== *@
+<div class="header-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+            <a href="tel:+840387152537"><i class="fa-solid fa-phone"></i> (+84) 0387152537</a>
+            <span class="separator">|</span>
+            <a href="mailto:PhucPhuong@gmail.com"><i class="fa-solid fa-envelope"></i> PhucPhuong@gmail.com</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-nav" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/images/Logo 3.png" alt="Logo" class="header-logo" />
+            <span class="brand-name-text">PHUCPHUONG</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><NavLink class="nav-link" href="/">Trang chủ</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="/services">Dịch vụ</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="/doctors">Bác sĩ</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link active" href="/about">Về chúng tôi</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="/contact">Liên hệ</NavLink></li>
+            </ul>
+            <a href="/#appointment-section" class="btn btn-primary-custom ms-lg-3">Đặt lịch hẹn</a>
+        </div>
+    </div>
+</nav>
+
+@* ===== NỘI DUNG MỚI CỦA TRANG "VỀ CHÚNG TÔI" - THIẾT KẾ LỘNG LẪY ===== *@
+<div class="about-page-body">
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="container text-center">
+            <h1 class="about-hero-title animate-on-load fade-in-up">Câu Chuyện Về PHUCPHUONG</h1>
+            <p class="about-hero-subtitle animate-on-load fade-in-up" data-delay="200">Hơn cả một bệnh viện, chúng tôi là người bạn đồng hành trên hành trình chăm sóc sức khỏe của bạn.</p>
+        </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 animate-on-scroll fade-in-left">
+                    <div class="story-image-wrapper">
+                        <img src="https://xcare-demo.pbminfotech.com/demo2/wp-content/uploads/sites/5/2024/01/tab-img-03.jpg" alt="Bác sĩ thân thiện" class="img-fluid main-image">
+                        <div class="story-image-overlay">
+                            <i class="fa-solid fa-staff-snake"></i>
+                            <p>Y Đức Là Nền Tảng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate-on-scroll fade-in-right" data-delay="200">
+                    <div class="section-header text-start">
+                        <span class="hero-tagline">HÀNH TRÌNH CỦA CHÚNG TÔI</span>
+                        <h2 class="section-title mb-4">Kiến Tạo Tương Lai Ngành Y Tế</h2>
+                    </div>
+                    <p class="mb-4">
+                        PHUCPHUONG ra đời từ khát vọng xây dựng một hệ thống y tế hiện đại, chuyên nghiệp và thân thiện, nơi mọi người dân đều có thể tiếp cận dịch vụ chăm sóc sức khỏe tốt nhất. Chúng tôi bắt đầu với một đội ngũ nhỏ các y bác sĩ cùng chung tâm huyết, và giờ đây đã trở thành một trong những địa chỉ y tế đáng tin cậy.
+                    </p>
+                    <p>
+                        Mỗi bước đi của chúng tôi đều gắn liền với việc ứng dụng công nghệ mới, nâng cao trình độ chuyên môn và không ngừng cải thiện chất lượng dịch vụ, tất cả vì một mục tiêu duy nhất: sức khỏe và nụ cười của bạn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">ĐỊNH HƯỚNG PHÁT TRIỂN</span>
+                <h2 class="section-title">Sứ Mệnh & Tầm Nhìn</h2>
+            </div>
+            <div class="row g-4 justify-content-center mt-4">
+                <div class="col-lg-5 animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="mv-card">
+                        <div class="mv-icon-wrapper">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="mv-title">Sứ Mệnh</h3>
+                        <p class="mv-text">Cung cấp dịch vụ y tế chất lượng cao, dễ tiếp cận và tận tâm, góp phần nâng cao sức khỏe và chất lượng cuộc sống cho cộng đồng.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 animate-on-scroll fade-in-up" data-delay="400">
+                    <div class="mv-card">
+                        <div class="mv-icon-wrapper">
+                            <i class="fa-solid fa-binoculars"></i>
+                        </div>
+                        <h3 class="mv-title">Tầm Nhìn</h3>
+                        <p class="mv-text">Trở thành hệ thống y tế thông minh hàng đầu khu vực, là biểu tượng của sự tin cậy, đổi mới và chăm sóc toàn diện.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">CÁC CỘT MỐC QUAN TRỌNG</span>
+                <h2 class="section-title">Dòng Thời Gian Phát Triển</h2>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item animate-on-scroll fade-in-up">
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i class="fa-solid fa-flag"></i></div>
+                        <h3 class="timeline-title">Thành Lập</h3>
+                        <p class="timeline-year">2015</p>
+                        <p>PHUCPHUONG chính thức ra đời, đặt những viên gạch đầu tiên cho một hệ thống y tế hiện đại.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h3 class="timeline-title">Ra Mắt Khoa Tim Mạch</h3>
+                        <p class="timeline-year">2017</p>
+                        <p>Trở thành một trong những đơn vị tiên phong trong chẩn đoán và điều trị bệnh lý tim mạch.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll fade-in-up" data-delay="400">
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i class="fa-solid fa-certificate"></i></div>
+                        <h3 class="timeline-title">Đạt Chuẩn Chất Lượng</h3>
+                        <p class="timeline-year">2020</p>
+                        <p>Nhận chứng nhận chất lượng dịch vụ y tế, khẳng định uy tín và sự chuyên nghiệp.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll fade-in-up" data-delay="600">
+                    <div class="timeline-content">
+                        <div class="timeline-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3 class="timeline-title">Mở Rộng và Phát Triển</h3>
+                        <p class="timeline-year">2025</p>
+                        <p>Tiếp tục đầu tư công nghệ, mở rộng quy mô và hướng tới mục tiêu bệnh viện thông minh toàn diện.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS/STATS COUNTER SECTION -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">CON SỐ BIẾT NÓI</span>
+                <h2 class="section-title">Thành Tựu Của Chúng Tôi</h2>
+            </div>
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6 animate-on-scroll fade-in-up" data-delay="100">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="counter-number" data-goal="9000">0</h3>
+                        <p class="counter-label">Bệnh Nhân Hài Lòng</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <h3 class="counter-number" data-goal="50">0</h3>
+                        <p class="counter-label">Bác Sĩ Chuyên Gia</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 animate-on-scroll fade-in-up" data-delay="300">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fa-solid fa-award"></i></div>
+                        <h3 class="counter-number" data-goal="10">0</h3>
+                        <p class="counter-label">Năm Kinh Nghiệm</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 animate-on-scroll fade-in-up" data-delay="400">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fa-solid fa-microscope"></i></div>
+                        <h3 class="counter-number" data-goal="100">0</h3>
+                        <p class="counter-label">Thiết Bị Hiện Đại</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION -->
+    <section class="core-values-section">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">NỀN TẢNG CỦA CHÚNG TÔI</span>
+                <h2 class="section-title">Giá Trị Cốt Lõi</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll fade-in-up" data-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h3 class="value-title">Tận Tâm</h3>
+                        <p class="value-text">Chúng tôi chăm sóc bệnh nhân bằng cả trái tim, luôn lắng nghe, thấu hiểu và đặt lợi ích của người bệnh lên hàng đầu.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="value-title">Chuyên Nghiệp</h3>
+                        <p class="value-text">Đội ngũ y bác sĩ và nhân viên y tế không ngừng học hỏi, tuân thủ quy trình nghiêm ngặt để đảm bảo an toàn và hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll fade-in-up" data-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 class="value-title">Đổi Mới</h3>
+                        <p class="value-text">Luôn tiên phong ứng dụng công nghệ và các phương pháp điều trị tiên tiến nhất để mang lại kết quả tối ưu cho bệnh nhân.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY & INNOVATION SECTION -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 animate-on-scroll fade-in-left">
+                    <div class="section-header text-start">
+                        <span class="hero-tagline">CÔNG NGHỆ & ĐỔI MỚI</span>
+                        <h2 class="section-title mb-4">Tiên Phong Ứng Dụng Công Nghệ Y Tế</h2>
+                    </div>
+                    <p class="mb-4">
+                        Chúng tôi tin rằng công nghệ là chìa khóa để nâng cao chất lượng chẩn đoán và điều trị. PHUCPHUONG tự hào đầu tư vào các hệ thống máy móc và phần mềm y tế hiện đại bậc nhất.
+                    </p>
+                    <ul class="tech-list">
+                        <li><i class="fa-solid fa-check"></i> Hệ thống chẩn đoán hình ảnh 4D/5D.</li>
+                        <li><i class="fa-solid fa-check"></i> Phòng xét nghiệm tự động hóa.</li>
+                        <li><i class="fa-solid fa-check"></i> Nền tảng quản lý bệnh án điện tử (EMR).</li>
+                        <li><i class="fa-solid fa-check"></i> Hệ thống đặt lịch hẹn thông minh qua AI.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 animate-on-scroll fade-in-right" data-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=2070&auto=format&fit=crop" alt="Công nghệ y tế" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team-section">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">CON NGƯỜI LÀ TRỌNG TÂM</span>
+                <h2 class="section-title">Đội Ngũ Chuyên Gia Của Chúng Tôi</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="100">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_2.png" alt="Bác sĩ A">
+                        </div>
+                        <div class="team-info">
+                            <h5 class="team-name">BS. Nguyễn Văn A</h5>
+                            <p class="team-specialty">Trưởng khoa Tim mạch</p>
+                            <div class="team-socials">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_1.png" alt="Bác sĩ B">
+                        </div>
+                        <div class="team-info">
+                            <h5 class="team-name">BS. Trần Thị B</h5>
+                            <p class="team-specialty">Trưởng khoa Nhi</p>
+                            <div class="team-socials">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="300">
+                    <div class="team-card">
+                        <div class="team-image-wrapper">
+                            <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_4.png" alt="Bác sĩ C">
+                        </div>
+                        <div class="team-info">
+                            <h5 class="team-name">BS. Lê Văn C</h5>
+                            <p class="team-specialty">Trưởng khoa Răng Hàm Mặt</p>
+                            <div class="team-socials">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 animate-on-scroll fade-in-up">
+                <a href="/doctors" class="btn btn-primary-custom">Xem tất cả bác sĩ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section-new">
+        <div class="container">
+            <div class="text-center section-header animate-on-scroll fade-in-up">
+                <span class="hero-tagline">NIỀM TIN CỦA BẠN</span>
+                <h2 class="section-title">Bệnh Nhân Nói Gì Về Chúng Tôi</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 animate-on-scroll fade-in-up" data-delay="100">
+                    <div class="testimonial-card">
+                        <div class="patient-info">
+                            <img src="https://placehold.co/80x80/0fabf1/ffffff?text=H" alt="Patient">
+                            <div>
+                                <h6 class="patient-name">Trần Văn Hùng</h6>
+                                <span>Bệnh nhân Tim mạch</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Dịch vụ tuyệt vời, bác sĩ rất tận tâm và chuyên nghiệp. Quy trình đặt lịch và khám chữa bệnh rất nhanh chóng, tiện lợi. Tôi hoàn toàn hài lòng."</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate-on-scroll fade-in-up" data-delay="200">
+                    <div class="testimonial-card">
+                        <div class="patient-info">
+                            <img src="https://placehold.co/80x80/012548/ffffff?text=L" alt="Patient">
+                            <div>
+                                <h6 class="patient-name">Nguyễn Thị Lan</h6>
+                                <span>Phụ huynh bệnh nhi</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Con tôi rất sợ đi khám nhưng các bác sĩ khoa Nhi ở đây rất tâm lý và thân thiện. Cảm ơn phòng khám rất nhiều vì đã chăm sóc cho bé nhà tôi."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="cta-title animate-on-scroll fade-in-up">Bạn đã sẵn sàng để trải nghiệm dịch vụ y tế tốt nhất?</h2>
+            <p class="cta-subtitle animate-on-scroll fade-in-up" data-delay="100">Hãy để chúng tôi chăm sóc sức khỏe cho bạn và gia đình.</p>
+            <a href="/#appointment-section" class="btn btn-primary-custom mt-4 animate-on-scroll fade-in-up" data-delay="200">Đặt Lịch Hẹn Ngay</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <a class="footer-brand" href="/">
+                            <img src="/images/Logo 3.png" alt="Logo" class="footer-logo" />
+                            <span class="brand-name-text">PHUCPHUONG</span>
+                        </a>
+                        <p class="footer-about">Nền tảng y tế số hàng đầu, mang lại giải pháp chăm sóc sức khỏe toàn diện, thông minh và tiện lợi cho mọi người.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Liên kết nhanh</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="/about">Về chúng tôi</a></li>
+                            <li><a href="/services">Dịch vụ</a></li>
+                            <li><a href="/doctors">Bác sĩ</a></li>
+                            <li><a href="/contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Dịch vụ chính</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="#">Khoa Tim Mạch</a></li>
+                            <li><a href="#">Khoa Nhi</a></li>
+                            <li><a href="#">Khoa Răng Hàm Mặt</a></li>
+                            <li><a href="#">Khám tổng quát</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Thông tin liên hệ</h5>
+                        <ul class="list-unstyled footer-contact">
+                            <li><i class="fa-solid fa-location-dot"></i> 99 Hồ Đắc Di, An Cựu, TP. Huế</li>
+                            <li><i class="fa-solid fa-phone"></i> (+84) 0387152537</li>
+                            <li><a href="mailto:PhucPhuong@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;"><i class="fa-solid fa-envelope"></i> PhucPhuong@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; @DateTime.Now.Year PHUCPHUONG. All Rights Reserved. </p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    /* Reset and Base Styles (Copied from Index for consistency) */
+    :root {
+        --primary-color: #0fabf1;
+        --secondary-color: #012548;
+        --text-color: #555;
+        --heading-color: #012548;
+        --light-bg-color: #f8faff;
+        --white-color: #ffffff;
+        --border-color: #e9e9e9;
+        --light-blue-bg: #e8f7fe;
+    }
+
+    .about-page-body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background-color: var(--white-color);
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    .hero-tagline {
+        color: var(--primary-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .section-header .section-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    .section-header p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Animation Keyframes */
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Animation Classes */
+    .animate-on-load, .animate-on-scroll {
+        opacity: 0;
+    }
+
+        .animate-on-scroll.is-visible, .animate-on-load.is-visible {
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+    .fade-in-up.is-visible {
+        animation-name: fadeInUp;
+    }
+
+    .fade-in-left.is-visible {
+        animation-name: fadeInLeft;
+    }
+
+    .fade-in-right.is-visible {
+        animation-name: fadeInRight;
+    }
+
+    .zoom-in.is-visible {
+        animation-name: zoomIn;
+    }
+
+    /* Sections General Styling */
+    .story-section, .mission-vision-section, .timeline-section, .achievements-section, .core-values-section, .team-section, .tech-section, .testimonials-section-new, .cta-section {
+        padding: 100px 0;
+        position: relative;
+    }
+
+    .mission-vision-section, .achievements-section, .tech-section, .testimonials-section-new, .cta-section {
+        background-color: var(--light-bg-color);
+    }
+
+    /* HERO SECTION - Enhanced */
+    .about-hero {
+        padding: 120px 0;
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        color: var(--white-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        transition: all 0.5s ease;
+    }
+
+    .hero-shape-1 {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        left: 10%;
+    }
+
+    .hero-shape-2 {
+        width: 150px;
+        height: 150px;
+        bottom: -75px;
+        right: 15%;
+    }
+
+    .about-hero:hover .hero-shape {
+        transform: scale(1.2);
+    }
+
+    .about-hero .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .about-hero-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .about-hero-subtitle {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 1rem auto 0;
+        opacity: 0.9;
+    }
+
+    /* STORY SECTION */
+    .story-image-wrapper {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .story-image-overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: rgba(1, 37, 72, 0.8);
+        color: var(--white-color);
+        padding: 20px 25px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+        .story-image-overlay i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+    /* MISSION & VISION SECTION - Refined */
+    .mv-card {
+        background-color: var(--white-color);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        height: 100%;
+        border-top: 4px solid transparent;
+    }
+
+        .mv-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px -12px rgba(15, 171, 241, 0.25);
+            border-top-color: var(--primary-color);
+        }
+
+    .mv-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+        background-color: var(--light-blue-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        transition: all 0.4s ease;
+    }
+
+    .mv-card:hover .mv-icon-wrapper {
+        transform: scale(1.1) rotate(10deg);
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        box-shadow: 0 10px 20px rgba(15, 171, 241, 0.4);
+    }
+
+    .mv-title {
+        font-size: 1.8rem;
+        color: var(--heading-color);
+        margin-bottom: 15px;
+    }
+
+    .mv-text {
+        font-size: 1rem;
+        color: var(--text-color);
+        line-height: 1.7;
+    }
+
+    /* TIMELINE SECTION - Enhanced & Fixed */
+    .timeline-section {
+        background-color: var(--white-color);
+    }
+
+    /* Mobile First: Single Column Layout */
+    .timeline-container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: var(--light-blue-bg);
+            left: 25px; /* Position for mobile */
+            top: 0;
+            border-radius: 3px;
+        }
+
+    .timeline-item {
+        padding-left: 70px; /* Space for icon */
+        position: relative;
+    }
+
+    .timeline-content {
+        padding: 30px;
+        background-color: var(--white-color);
+        border-radius: 10px;
+        box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+    }
+
+    .timeline-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: var(--white-color);
+        top: 15px; /* Align with content better */
+        left: 0;
+        border-radius: 50%;
+        z-index: 10;
+        display: grid;
+        place-items: center;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        border: 3px solid var(--primary-color);
+        box-shadow: 0 0 0 4px var(--white-color);
+    }
+
+    .timeline-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .timeline-year {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        display: inline-block;
+        background: var(--light-blue-bg);
+        padding: 2px 8px;
+        border-radius: 20px;
+    }
+
+    /* Desktop: Two Column Layout */
+    @@media (min-width: 768px) {
+        .timeline-container {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 80px; /* row-gap column-gap */
+            align-items: start; /* CRITICAL FIX: Aligns items to the top of their grid cell */
+        }
+
+            .timeline-container::before {
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+                box-shadow: 0 0 10px rgba(15, 171, 241, 0.5);
+            }
+
+        .timeline-item {
+            padding: 0; /* Reset mobile padding */
+        }
+
+            .timeline-item:nth-child(odd) {
+                grid-column: 1;
+                text-align: right;
+            }
+
+            .timeline-item:nth-child(even) {
+                grid-column: 2;
+                text-align: left;
+            }
+
+        .timeline-content:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.15);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content:hover {
+            transform: translateX(-10px);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-icon {
+            transform: none; /* Reset transform if any */
+        }
+
+        .timeline-item:nth-child(odd) .timeline-icon {
+            left: auto;
+            right: -65px; /* -(column-gap/2) - (icon-width/2) = -40 - 25 = -65 IS WRONG. Should be just half icon width outside the item */
+            right: -25px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-icon {
+            right: auto;
+            left: -25px;
+        }
+    }
+
+    /* ACHIEVEMENTS SECTION */
+    .achievements-section {
+        background: var(--light-bg-color) url('https://www.toptal.com/designers/subtlepatterns/uploads/threads.png');
+    }
+
+    .counter-item {
+        padding: 20px;
+    }
+
+    .counter-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .counter-item:hover .counter-icon {
+        transform: scale(1.2);
+    }
+
+    .counter-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    .counter-label {
+        font-size: 1rem;
+        color: var(--text-color);
+        font-weight: 500;
+    }
+
+    /* CORE VALUES SECTION */
+    .core-values-section {
+        background-color: var(--white-color);
+    }
+
+    .value-card {
+        padding: 40px 30px;
+        text-align: center;
+        background: var(--light-bg-color);
+        border-radius: 15px;
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(15, 171, 241, 0.15);
+        }
+
+            .value-card:hover::before {
+                opacity: 0.1;
+                transform: scale(3);
+            }
+
+    .value-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 2;
+    }
+
+    .value-card:hover .value-icon {
+        transform: scale(1.2);
+    }
+
+    .value-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .value-text {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* TECH SECTION */
+    .tech-list li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .tech-list i {
+        color: var(--white-color);
+        background: var(--primary-color);
+        margin-right: 15px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-grid;
+        place-items: center;
+        font-size: 0.8rem;
+    }
+
+    /* TEAM SECTION - Enhanced */
+    .team-card {
+        background: var(--white-color);
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        transition: all 0.4s ease;
+        position: relative;
+    }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+    .team-image-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
+
+        .team-image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(1, 37, 72, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+    .team-card:hover .team-image-wrapper::after {
+        opacity: 1;
+    }
+
+    .team-image-wrapper img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.4s ease;
+    }
+
+    .team-card:hover .team-image-wrapper img {
+        transform: scale(1.05);
+    }
+
+    .team-info {
+        padding: 25px;
+    }
+
+    .team-name {
+        font-size: 1.4rem;
+    }
+
+    .team-specialty {
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .team-socials {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .team-card:hover .team-socials {
+        opacity: 1;
+    }
+
+    .team-socials a {
+        color: var(--white-color);
+        margin: 0 8px;
+        font-size: 1.1rem;
+    }
+
+    /* TESTIMONIALS SECTION - Enhanced */
+    .testimonial-card {
+        background-color: var(--white-color);
+        padding: 30px;
+        border-radius: 15px;
+        border-left: 5px solid var(--primary-color);
+        box-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+        height: 100%;
+        position: relative;
+    }
+
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 4rem;
+            color: var(--light-bg-color);
+            z-index: 1;
+        }
+
+    .patient-info, .testimonial-text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        color: #333;
+        margin-top: 1rem;
+    }
+
+    .patient-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+        .patient-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+
+    .patient-name {
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .patient-info span {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+        background-color: var(--secondary-color);
+        background-image: linear-gradient(rgba(1, 37, 72, 0.95), rgba(1, 37, 72, 0.95)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .cta-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--white-color);
+    }
+
+    .cta-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        color: var(--white-color);
+    }
+
+    /* Copied Styles from Index (Header, Footer, Button) */
+    .header-top {
+        background-color: var(--light-bg-color);
+        padding: 10px 0;
+        font-size: 14px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .contact-info a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+    .contact-info i {
+        color: var(--primary-color);
+        margin-right: 5px;
+    }
+
+    .separator {
+        color: #ddd;
+        margin-right: 15px;
+    }
+
+    .social-icons a {
+        color: var(--text-color);
+        margin-left: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+    .main-nav {
+        background-color: var(--white-color);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        padding: 10px 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-logo {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .brand-name-text {
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    .main-nav .nav-link {
+        color: var(--heading-color);
+        font-weight: 500;
+        margin: 0 10px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+        .main-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav .nav-link:hover::after, .main-nav .nav-link.active::after {
+            width: 50%;
+        }
+
+        .main-nav .nav-link:hover, .main-nav .nav-link.active {
+            color: var(--primary-color);
+            background-color: transparent;
+        }
+
+    .btn-primary-custom {
+        background-image: linear-gradient(to right, var(--primary-color) 0%, #0ab3e4 50%, var(--primary-color) 100%);
+        background-size: 200% auto;
+        color: var(--white-color);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(15, 171, 241, 0.3);
+    }
+
+        .btn-primary-custom:hover {
+            background-position: right center;
+            color: var(--white-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15, 171, 241, 0.4);
+        }
+
+    .site-footer {
+        background-color: var(--secondary-color);
+        color: rgba(255,255,255,0.7);
+        padding: 80px 0 0;
+    }
+
+    .footer-widget .widget-title {
+        color: var(--white-color);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        height: 40px;
+    }
+
+    .footer-brand .brand-name-text {
+        color: var(--white-color);
+        margin-left: 10px;
+    }
+
+    .footer-about {
+        line-height: 1.8;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+    .footer-contact li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact i {
+        color: var(--primary-color);
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
+    .footer-bottom {
+        background-color: #001c38;
+        padding: 20px 0;
+        margin-top: 60px;
+    }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+</style>
+
+
+@code {
+    // Inject JSRuntime to call JavaScript functions from C#
+    private string script = @"
+        window.initAboutPageAnims = function() {
+            // Function to animate counters
+            const animateCounter = (el) => {
+                const goal = parseInt(el.dataset.goal);
+                if (el.hasAttribute('data-animated')) return; // Prevent re-animating
+                el.setAttribute('data-animated', 'true');
+                let current = 0;
+                const duration = 2000; // 2 seconds
+                const increment = goal / (duration / 16); // ~60fps
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < goal) {
+                        el.innerText = Math.ceil(current).toLocaleString('vi-VN') + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        el.innerText = goal.toLocaleString('vi-VN') + '+';
+                    }
+                };
+                requestAnimationFrame(updateCounter);
+            };
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Regular animation for fade-in effects
+                        const delay = entry.target.dataset.delay || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('is-visible');
+                            if (entry.target.classList.contains('fade-in-up')) {
+                                entry.target.style.animationName = 'fadeInUp';
+                            } else if (entry.target.classList.contains('fade-in-left')) {
+                                entry.target.style.animationName = 'fadeInLeft';
+                            } else if (entry.target.classList.contains('fade-in-right')) {
+                                entry.target.style.animationName = 'fadeInRight';
+                            }
+                        }, parseInt(delay));
+
+                        // Check if a child element is a counter and start animation
+                        const counter = entry.target.querySelector('.counter-number');
+                        if(counter){
+                             animateCounter(counter);
+                        }
+
+                        // Unobserve after animation starts to save resources
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements that need scroll-triggered animations
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Handle elements that should animate on page load
+            document.querySelectorAll('.animate-on-load').forEach(el => {
+                const delay = el.dataset.delay || 0;
+                setTimeout(() => {
+                    el.classList.add('is-visible');
+                    if (el.classList.contains('fade-in-up')) el.style.animationName = 'fadeInUp';
+                    if (el.classList.contains('fade-in-left')) el.style.animationName = 'fadeInLeft';
+                    if (el.classList.contains('fade-in-right')) el.style.animationName = 'fadeInRight';
+                }, parseInt(delay));
+            });
+        };";
+
+    // This Blazor lifecycle method runs after the component has been rendered.
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // We need to run JavaScript after the page is loaded to initialize animations.
+            // 'eval' is used here to define the function in the global scope.
+            await JSRuntime.InvokeVoidAsync("eval", script);
+            // Call the newly defined JavaScript function.
+            await JSRuntime.InvokeVoidAsync("initAboutPageAnims");
+        }
+    }
+}

@@ -1,0 +1,1547 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+<PageTitle>Trang chủ - HealthScheduler</PageTitle>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<div class="header-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+            <a href="tel:+840387152537"><i class="fa-solid fa-phone"></i> (+84) 0387152537</a>
+            <span class="separator">|</span>
+            <a href="mailto:PhucPhuong@gmail.com"><i class="fa-solid fa-envelope"></i> PhucPhuong@gmail.com</a>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-nav" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="/images/Logo 3.png" alt="Logo" class="header-logo" />
+            <span class="brand-name-text">PHUCPHUONG</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><NavLink class="nav-link active" href="/">Trang chủ</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="/services">Dịch vụ</NavLink></li>
+              
+                <li class="nav-item"><NavLink class="nav-link" href="/about">Về chúng tôi</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link" href="/contact">Liên hệ</NavLink></li>
+            </ul>
+            <a href="#appointment-section" class="btn btn-primary-custom ms-lg-3">Đặt lịch hẹn</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content animate-on-load fade-in-left">
+                    <span class="hero-tagline">CHÀO MỪNG ĐẾN VỚI PHUCPHUONG</span>
+                    <h1 class="hero-title">Giải pháp y tế thông minh cho bạn</h1>
+                    <p class="hero-description">
+                        Chúng tôi cung cấp các dịch vụ chăm sóc sức khỏe hàng đầu, kết hợp công nghệ hiện đại và đội ngũ chuyên gia tận tâm để mang lại trải nghiệm tốt nhất.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#appointment-section" class="btn btn-primary-custom">Đặt lịch ngay</a>
+                        <a href="/services" class="btn btn-secondary-custom">Dịch vụ của chúng tôi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://clinicmaster.wprdx.com/dentist/wp-content/uploads/2024/08/img1.webp" alt="Bác sĩ và bệnh nhân" class="img-fluid hero-image animate-on-load fade-in-right">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section-new">
+    <div class="container">
+        <div class="text-center section-header animate-on-scroll fade-in-up">
+            <h2 class="section-title">Dịch vụ của chúng tôi</h2>
+            <p class="section-subtitle">Khám phá các dịch vụ y tế chuyên nghiệp mà chúng tôi cung cấp.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h5 class="service-title">Khoa Tim Mạch</h5>
+                    <p class="service-text">Chẩn đoán và điều trị toàn diện các bệnh lý tim mạch bằng công nghệ tiên tiến.</p>
+                    <a href="/services/cardiology" class="read-more">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+                    <h5 class="service-title">Khoa Nhi</h5>
+                    <p class="service-text">Chăm sóc sức khỏe cho trẻ em một cách toàn diện, chuyên nghiệp và tận tâm.</p>
+                    <a href="/services/pediatrics" class="read-more">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="300">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+                    <h5 class="service-title">Khoa Răng Hàm Mặt</h5>
+                    <p class="service-text">Dịch vụ nha khoa thẩm mỹ và điều trị chuyên sâu cho một nụ cười rạng rỡ, tự tin.</p>
+                    <a href="/services/dentistry" class="read-more">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us-detailed-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll fade-in-left">
+                <img src="https://xcare-demo.pbminfotech.com/demo2/wp-content/uploads/sites/5/2024/02/service-new-img-02-1010x615.jpg" class="img-fluid rounded-3 shadow-lg" alt="Đội ngũ PHUCPHUONG">
+            </div>
+            <div class="col-lg-6 animate-on-scroll fade-in-right">
+                <div class="section-header text-start">
+                    <span class="hero-tagline">CÂU CHUYỆN CỦA CHÚNG TÔI</span>
+                    <h2 class="section-title">Tận tâm vì sức khỏe, vững bước tương lai</h2>
+                    <p class="section-subtitle mb-4">Hành trình của PHUCPHUONG được xây dựng từ đam mê, sự chuyên nghiệp và khát vọng mang lại dịch vụ y tế tốt nhất cho cộng đồng.</p>
+                </div>
+                <p class="mb-3">
+                    Tại PHUCPHUONG, chúng tôi không chỉ xem việc chăm sóc sức khỏe là một công việc, mà đó là sứ mệnh. Chúng tôi tin rằng mỗi cá nhân đều xứng đáng nhận được sự quan tâm y tế tốt nhất, được xây dựng trên nền tảng của sự tin tưởng, tôn trọng và thấu hiểu.
+                </p>
+                <p>
+                    Với đội ngũ y bác sĩ hàng đầu và hệ thống trang thiết bị hiện đại, chúng tôi cam kết mang đến những giải pháp chẩn đoán và điều trị chính xác, hiệu quả, giúp bạn và gia đình luôn an tâm sống khỏe.
+                </p>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-trophy feature-icon"></i>
+                            <h6 class="feature-title">Chất lượng hàng đầu</h6>
+                            <p class="feature-text">Tuân thủ các tiêu chuẩn quốc tế nghiêm ngặt.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                            <h6 class="feature-title">Chăm sóc tận tình</h6>
+                            <p class="feature-text">Lắng nghe, thấu hiểu và đồng hành cùng bệnh nhân.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fun-facts-section" id="fun-facts">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll fade-in-up" data-delay="0">
+                <div class="fact-item">
+                    <i class="fa-solid fa-user-doctor fact-icon"></i>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Bác sĩ chuyên gia</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="fact-item">
+                    <i class="fa-solid fa-hospital-user fact-icon"></i>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p>Bệnh nhân hài lòng</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="fact-item">
+                    <i class="fa-solid fa-award fact-icon"></i>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Năm kinh nghiệm</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4 animate-on-scroll fade-in-up" data-delay="300">
+                <div class="fact-item">
+                    <i class="fa-solid fa-bed-pulse fact-icon"></i>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <p>Giường bệnh</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="doctors-section">
+    <div class="container">
+        <div class="text-center section-header animate-on-scroll fade-in-up">
+            <h2 class="section-title">Gặp gỡ đội ngũ bác sĩ</h2>
+            <p class="section-subtitle">Các chuyên gia tận tâm và giàu kinh nghiệm luôn sẵn sàng chăm sóc bạn.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_2.png" alt="Bác sĩ A">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">BS. Nguyễn Văn A</h5>
+                        <p class="doctor-specialty">Chuyên khoa Tim mạch</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_1.png" alt="Bác sĩ B">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">BS. Trần Thị B</h5>
+                        <p class="doctor-specialty">Chuyên khoa Nhi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll fade-in-up" data-delay="300">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_4.png" alt="Bác sĩ C">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">BS. Lê Văn C</h5>
+                        <p class="doctor-specialty">Chuyên khoa Răng Hàm Mặt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 animate-on-scroll fade-in-up" data-delay="400">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://wordpress.themeholy.com/medova/wp-content/uploads/2025/05/team_1_3.png" alt="Bác sĩ D">
+                    </div>
+                    <div class="doctor-info">
+                        <h5 class="doctor-name">BS. Phạm Thị D</h5>
+                        <p class="doctor-specialty">Bác sĩ đa khoa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="best-services-section">
+    <div class="container">
+        <div class="text-center section-header animate-on-scroll fade-in-up">
+            <span class="hero-tagline">TRẢI NGHIỆM VƯỢT TRỘI</span>
+            <h2 class="section-title">Dịch Vụ Chất Lượng Tốt Nhất Bạn Có Thể Nhận Được</h2>
+            <p class="section-subtitle">Chúng tôi tự hào mang đến những dịch vụ y tế được thiết kế chuyên biệt, đảm bảo sự hài lòng và kết quả điều trị tối ưu.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="best-service-card">
+                    <div class="best-service-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h5 class="best-service-title">Tư vấn 1:1 với Chuyên gia</h5>
+                    <p class="best-service-text">Dành thời gian trao đổi trực tiếp và kỹ lưỡng với các bác sĩ đầu ngành để có được lời khuyên chính xác nhất.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="best-service-card">
+                    <div class="best-service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                    <h5 class="best-service-title">Chẩn đoán Công nghệ cao</h5>
+                    <p class="best-service-text">Sử dụng hệ thống máy móc hiện đại bậc nhất để phát hiện sớm và chẩn đoán chính xác các vấn đề sức khỏe.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="300">
+                <div class="best-service-card">
+                    <div class="best-service-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h5 class="best-service-title">Phác đồ Điều trị Cá nhân hóa</h5>
+                    <p class="best-service-text">Thiết kế liệu trình điều trị riêng biệt, phù hợp với thể trạng và nhu cầu của từng bệnh nhân.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="appointment-section" id="appointment-section">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-5 working-hours-col animate-on-scroll fade-in-left">
+                <div class="working-hours">
+                    <h3 class="working-hours-title">Giờ làm việc</h3>
+                    <p>Chúng tôi luôn sẵn sàng phục vụ. Dưới đây là khung giờ hoạt động của phòng khám:</p>
+                    <ul class="list-unstyled">
+                        <li>Thứ Hai - Thứ Sáu <span>8:00 - 19:00</span></li>
+                        <li>Thứ Bảy <span>9:00 - 17:00</span></li>
+                        <li>Chủ Nhật <span>Đóng cửa</span></li>
+                    </ul>
+                    <hr />
+                    <div class="emergency-call">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <span>Hỗ trợ khẩn cấp 24/7</span>
+                            <strong>(+84) 0387152537</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 appointment-form-col animate-on-scroll fade-in-right">
+                <div class="appointment-form">
+                    <h3 class="form-title">Đặt lịch hẹn</h3>
+                    <p>Điền thông tin vào form dưới đây, chúng tôi sẽ liên hệ lại với bạn sớm nhất.</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Họ và tên của bạn" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="tel" class="form-control" placeholder="Số điện thoại" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select">
+                                    <option selected>Chọn dịch vụ...</option>
+                                    <option value="1">Khoa Tim Mạch</option>
+                                    <option value="2">Khoa Nhi</option>
+                                    <option value="3">Khoa Răng Hàm Mặt</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Ghi chú (nếu có)"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary-custom w-100">Gửi yêu cầu</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <div class="text-center section-header animate-on-scroll fade-in-up">
+            <h2 class="section-title">Bệnh nhân nói gì về chúng tôi</h2>
+            <p class="section-subtitle">Sự hài lòng của bạn là động lực lớn nhất của chúng tôi.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">Dịch vụ tuyệt vời, bác sĩ rất tận tâm và chuyên nghiệp. Quy trình đặt lịch và khám chữa bệnh rất nhanh chóng, tiện lợi. Tôi hoàn toàn hài lòng.</p>
+                    <div class="patient-info">
+                        <img src="https://placehold.co/80x80/0fabf1/ffffff?text=H" alt="Patient">
+                        <div>
+                            <h6 class="patient-name">Trần Văn Hùng</h6>
+                            <span>Bệnh nhân Tim mạch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">Con tôi rất sợ đi khám nhưng các bác sĩ khoa Nhi ở đây rất tâm lý và thân thiện. Cảm ơn phòng khám rất nhiều vì đã chăm sóc cho bé nhà tôi.</p>
+                    <div class="patient-info">
+                        <img src="https://placehold.co/80x80/012548/ffffff?text=L" alt="Patient">
+                        <div>
+                            <h6 class="patient-name">Nguyễn Thị Lan</h6>
+                            <span>Phụ huynh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- ===== BLOG SECTION ===== -->
+<!-- ============================================ -->
+<section class="blog-section">
+    <div class="container">
+        <div class="text-center section-header animate-on-scroll fade-in-up">
+            <span class="hero-tagline">TIN TỨC & BÀI VIẾT</span>
+            <h2 class="section-title">Cập nhật từ các chuyên gia của chúng tôi</h2>
+            <p class="section-subtitle">Theo dõi các bài viết mới nhất về y khoa, sức khỏe và đời sống để chăm sóc bản thân và gia đình tốt hơn.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="100">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1887&auto=format&fit=crop" alt="Blog post image"></a>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar-days"></i> 08/06/2025</span>
+                            <span><i class="fa-solid fa-tag"></i> Tim Mạch</span>
+                        </div>
+                        <h5 class="blog-title"><a href="#">5 Thói quen tốt cho trái tim khỏe mạnh bạn nên biết</a></h5>
+                        <p class="blog-excerpt">Một trái tim khỏe mạnh là nền tảng của cuộc sống. Hãy cùng tìm hiểu những thói quen đơn giản...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="200">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <a href="#"><img src="https://cdn.nhathuoclongchau.com.vn/unsafe/800x0/filters:quality(95)/https://cms-prod.s3-sgn09.fptcloud.com/che_do_dinh_duong_hop_ly_1_186ff2729b.jpg" alt="Blog post image"></a>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar-days"></i> 05/06/2025</span>
+                            <span><i class="fa-solid fa-tag"></i> Dinh Dưỡng</span>
+                        </div>
+                        <h5 class="blog-title"><a href="#">Chế độ ăn uống cân bằng cho người làm việc văn phòng</a></h5>
+                        <p class="blog-excerpt">Ngồi nhiều và ít vận động có thể ảnh hưởng đến sức khỏe. Một chế độ ăn uống hợp lý sẽ giúp bạn...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll fade-in-up" data-delay="300">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <a href="#"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto=format&fit=crop" alt="Blog post image"></a>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-solid fa-calendar-days"></i> 01/06/2025</span>
+                            <span><i class="fa-solid fa-tag"></i> Sức khỏe</span>
+                        </div>
+                        <h5 class="blog-title"><a href="#">Tầm quan trọng của việc khám sức khỏe định kỳ</a></h5>
+                        <p class="blog-excerpt">Đừng đợi đến khi có bệnh mới đi khám. Khám sức khỏe định kỳ giúp phát hiện sớm các nguy cơ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- ===== MAP SECTION ===== -->
+<!-- ============================================ -->
+<section class="map-section">
+    <div class="map-container">
+        <iframe src="https://maps.google.com/maps?q=99%20H%E1%BB%93%20%C4%90%E1%BA%AFc%20Di,%20An%20C%E1%BB%B1u,%20Hu%E1%BA%BF&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <div class="container">
+        <div class="map-info-box animate-on-scroll fade-in-up">
+            <div class="row">
+                <div class="col-md-6 info-card">
+                    <div class="info-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h5>Giờ làm việc</h5>
+                        <p>Thứ Hai - Thứ Sáu: 8:00 - 19:00</p>
+                        <p>Thứ Bảy: 9:00 - 17:00</p>
+                    </div>
+                </div>
+                <div class="col-md-6 info-card">
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info-content">
+                        <h5>Địa chỉ văn phòng</h5>
+                        <p>99 Hồ Đắc Di, An Cựu, Thành phố Huế</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <a class="footer-brand" href="/">
+                        <img src="/images/Logo 3.png" alt="Logo" class="footer-logo" />
+                        <span class="brand-name-text">PHUCPHUONG</span>
+                    </a>
+                    <p class="footer-about">Nền tảng y tế số hàng đầu, mang lại giải pháp chăm sóc sức khỏe toàn diện, thông minh và tiện lợi cho mọi người.</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-widget">
+                    <h5 class="widget-title">Liên kết nhanh</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="/about">Về chúng tôi</a></li>
+                        <li><a href="/services">Dịch vụ</a></li>
+                        <li><a href="/doctors">Bác sĩ</a></li>
+                        <li><a href="/contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h5 class="widget-title">Dịch vụ chính</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Khoa Tim Mạch</a></li>
+                        <li><a href="#">Khoa Nhi</a></li>
+                        <li><a href="#">Khoa Răng Hàm Mặt</a></li>
+                        <li><a href="#">Khám tổng quát</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h5 class="widget-title">Thông tin liên hệ</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> 99 Hồ Đắc Di, An Cựu, TP. Huế</li>
+                        <li><i class="fa-solid fa-phone"></i> (+84) 0387152537</li>
+                        <li><a href="mailto:PhucPhuong@gmail.com" style="color: rgba(255,255,255,0.7); text-decoration: none;"><i class="fa-solid fa-envelope"></i> PhucPhuong@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container text-center">
+            <p>&copy; @DateTime.Now.Year PHUCPHUONG. All Rights Reserved. </p>
+        </div>
+    </div>
+</footer>
+
+
+<style>
+    /* Google Fonts */
+    @@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:wght@500;700&display=swap');
+
+    :root {
+        --primary-color: #0fabf1;
+        --secondary-color: #012548;
+        --text-color: #555;
+        --heading-color: #012548;
+        --light-bg-color: #f9f9f9;
+        --white-color: #ffffff;
+        --border-color: #e9e9e9;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-color);
+        background-color: var(--white-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        color: var(--heading-color);
+        font-weight: 600;
+    }
+
+    /* ===== Animation Keyframes ===== */
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @@keyframes icon-bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* ===== Animation Classes ===== */
+    .animate-on-load {
+        animation-duration: 0.8s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+    }
+
+    .fade-in-left {
+        animation-name: fadeInLeft;
+    }
+
+    .fade-in-right {
+        animation-name: fadeInRight;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .fade-in-left.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+        animation: fadeInLeft 0.8s ease-out forwards;
+    }
+
+    .fade-in-right.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+        animation: fadeInRight 0.8s ease-out forwards;
+    }
+
+
+    .header-top {
+        background-color: var(--light-bg-color);
+        padding: 10px 0;
+        font-size: 14px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+        .header-top .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+            .header-top .contact-info a:hover {
+                color: var(--primary-color);
+            }
+
+        .header-top .contact-info i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+        .header-top .separator {
+            color: #ddd;
+            margin-right: 15px;
+        }
+
+    .social-icons a {
+        color: var(--text-color);
+        margin-left: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+    .main-nav {
+        background-color: var(--white-color);
+        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        padding: 10px 0;
+        transition: all 0.3s ease;
+    }
+
+        .main-nav.scrolled {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-logo {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .brand-name-text {
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    .main-nav .nav-link {
+        color: var(--heading-color);
+        font-weight: 500;
+        margin: 0 10px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+        .main-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .main-nav .nav-link:hover::after, .main-nav .nav-link.active::after {
+            width: 50%;
+        }
+
+
+        .main-nav .nav-link:hover, .main-nav .nav-link.active {
+            color: var(--primary-color);
+            background-color: transparent;
+        }
+
+    .btn-primary-custom {
+        background-image: linear-gradient(to right, var(--primary-color) 0%, #0ab3e4 50%, var(--primary-color) 100%);
+        background-size: 200% auto;
+        color: var(--white-color);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(15, 171, 241, 0.3);
+    }
+
+        .btn-primary-custom:hover {
+            background-position: right center;
+            color: var(--white-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15, 171, 241, 0.4);
+        }
+
+    .btn-secondary-custom {
+        background-color: transparent;
+        color: var(--heading-color);
+        border: 2px solid var(--border-color);
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+        .btn-secondary-custom:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+    .hero-section {
+        padding: 80px 0;
+        background-color: #f0faff;
+        overflow: hidden;
+    }
+
+    .hero-content .hero-tagline {
+        color: var(--primary-color);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .hero-content .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons .btn {
+        margin-right: 15px;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .section-header {
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .services-section-new, .doctors-section, .testimonials-section, .blog-section {
+        padding: 100px 0;
+        background-color: var(--white-color);
+    }
+
+    .service-card {
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 40px;
+        text-align: center;
+        transition: all 0.4s ease;
+        height: 100%;
+    }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+            .service-card:hover .service-icon {
+                animation: icon-bounce 0.8s ease;
+            }
+
+
+    .service-icon {
+        font-size: 40px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        display: inline-block;
+        background-color: #f0faff;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .service-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .read-more {
+        color: var(--primary-color);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .read-more:hover {
+            letter-spacing: 0.5px;
+        }
+
+    .appointment-section {
+        padding: 100px 0;
+        background-color: var(--light-bg-color); /* Light gray instead of blue */
+    }
+
+    .feature-list {
+        padding-left: 0;
+    }
+
+        .feature-list li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list i {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-right: 15px;
+        }
+
+    .doctors-section {
+        background-color: var(--light-bg-color);
+    }
+
+    .doctor-card {
+        background: var(--white-color);
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+        .doctor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+    .doctor-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .doctor-info {
+        padding: 20px;
+    }
+
+    .doctor-name {
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+    }
+
+    .doctor-specialty {
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    .appointment-section .row {
+        box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .working-hours-col {
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+        padding: 50px;
+    }
+
+    .working-hours-title {
+        color: var(--white-color);
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .working-hours p {
+        color: rgba(255,255,255,0.8);
+    }
+
+    .working-hours ul li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+        .working-hours ul li span {
+            font-weight: 600;
+        }
+
+    .emergency-call {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+        .emergency-call i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+        }
+
+        .emergency-call span {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .emergency-call strong {
+            font-size: 1.5rem;
+            color: var(--white-color);
+        }
+
+    .appointment-form-col {
+        background: var(--white-color);
+        padding: 50px;
+    }
+
+    .appointment-form .form-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .appointment-form .form-control, .appointment-form .form-select {
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    .testimonials-section {
+        padding: 100px 0;
+        background-color: #f0faff;
+    }
+
+    .testimonial-card {
+        background-color: var(--white-color);
+        padding: 40px;
+        border-radius: 10px;
+        position: relative;
+        height: 100%;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+    .quote-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        opacity: 0.2;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+
+    .testimonial-text {
+        font-size: 1.1rem;
+        font-style: italic;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .patient-info {
+        display: flex;
+        align-items: center;
+    }
+
+        .patient-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+    .patient-name {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+
+    .about-us-detailed-section {
+        padding: 100px 0;
+        background-color: var(--white-color);
+        overflow: hidden;
+    }
+
+    .feature-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-top: 5px;
+    }
+
+    .feature-title {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .feature-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .fun-facts-section {
+        padding: 80px 0;
+        background-image: linear-gradient(to right, rgba(1, 37, 72, 0.9), rgba(15, 171, 241, 0.9)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: var(--white-color);
+    }
+
+    .fact-item .fact-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+        color: var(--white-color);
+    }
+
+    .fact-item h3 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--white-color);
+    }
+
+    .fact-item p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba(255,255,255,0.9);
+    }
+
+    .best-services-section {
+        padding: 100px 0;
+        background-color: var(--light-bg-color);
+    }
+
+    .best-service-card {
+        background: var(--white-color);
+        padding: 35px;
+        border-radius: 10px;
+        text-align: center;
+        border-top: 4px solid var(--primary-color);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+    }
+
+        .best-service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+    .best-service-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .best-service-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .best-service-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* ===== BLOG SECTION CSS ===== */
+    .blog-section {
+        background-color: #f0faff;
+    }
+
+    .blog-card {
+        background: var(--white-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        transition: all 0.4s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+    .blog-image {
+        height: 220px;
+        overflow: hidden;
+    }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+    .blog-card:hover .blog-image img {
+        transform: scale(1.05);
+    }
+
+    .blog-content {
+        padding: 25px;
+        flex-grow: 1;
+    }
+
+    .blog-meta {
+        font-size: 0.85rem;
+        color: #777;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+        .blog-meta span {
+            margin-right: 15px;
+        }
+
+        .blog-meta i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+    .blog-title {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+        .blog-title a {
+            text-decoration: none;
+            color: var(--heading-color);
+            transition: color 0.3s ease;
+        }
+
+            .blog-title a:hover {
+                color: var(--primary-color);
+            }
+
+    .blog-excerpt {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+
+    /* ===== MAP SECTION CSS ===== */
+    .map-section {
+        position: relative;
+        padding: 0;
+        height: 550px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 80px;
+    }
+
+    .map-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+        .map-container iframe {
+            filter: grayscale(0.7);
+            transition: filter 0.4s ease;
+        }
+
+    .map-section:hover .map-container iframe {
+        filter: grayscale(0);
+    }
+
+    .map-info-box {
+        position: relative;
+        z-index: 10;
+        background: var(--white-color);
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        max-width: 850px;
+        width: 100%;
+    }
+
+    .info-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    @@media (min-width: 768px) {
+        .info-card:first-child {
+            padding-right: 25px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .info-card:last-child {
+            padding-left: 25px;
+        }
+    }
+
+    .info-icon {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+    }
+
+    .info-content h5 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .info-content p {
+        margin-bottom: 0;
+        color: var(--text-color);
+        line-height: 1.5;
+    }
+
+
+    .site-footer {
+        background-color: var(--secondary-color);
+        color: rgba(255,255,255,0.7);
+        padding: 80px 0 0;
+    }
+
+    .footer-widget .widget-title {
+        color: var(--white-color);
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        height: 40px;
+    }
+
+    .footer-brand .brand-name-text {
+        color: var(--white-color);
+        margin-left: 10px;
+    }
+
+    .footer-about {
+        line-height: 1.8;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+    .footer-contact li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact i {
+        color: var(--primary-color);
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
+    .footer-bottom {
+        background-color: #001c38;
+        padding: 20px 0;
+        margin-top: 60px;
+    }
+
+        .footer-bottom p {
+            margin: 0;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+    /* Responsive */
+    @@media (max-width: 992px) {
+        .header-top {
+            display: none;
+        }
+
+        .hero-section {
+            text-align: center;
+        }
+
+        .hero-content .hero-title {
+            font-size: 2.8rem;
+        }
+
+        .hero-image {
+            margin-top: 40px;
+        }
+
+        .about-us-detailed-section {
+            text-align: center;
+        }
+
+            .about-us-detailed-section .text-start {
+                text-align: center !important;
+            }
+
+        .feature-box {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .working-hours-col, .appointment-form-col {
+            padding: 30px;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .hero-content .hero-title {
+            font-size: 2.2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .map-section {
+            height: 650px;
+            padding-bottom: 20px;
+            align-items: flex-end;
+        }
+
+        .map-info-box {
+            margin: 0 15px;
+            padding: 25px;
+        }
+
+        .info-card {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+            .info-card:first-child {
+                margin-bottom: 15px;
+                padding-right: 0;
+                border-right: none;
+            }
+
+            .info-card:last-child {
+                padding-left: 0;
+            }
+    }
+</style>
+
+@code {
+    private string script = @"
+        window.initAnimations = function() {
+            // Scroll Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.dataset.delay || 0;
+                        setTimeout(() => {
+                             entry.target.classList.add('is-visible');
+                        }, parseInt(delay));
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Counter Animation
+            const counterObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            counter.innerText = '0';
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 2000;
+
+                            const updateCount = () => {
+                                const count = +counter.innerText.replace(/,/g, '');
+                                const increment = target / (duration / 15);
+
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + increment).toLocaleString();
+                                    setTimeout(updateCount, 15);
+                                } else {
+                                    counter.innerText = target.toLocaleString();
+                                }
+                            };
+                            updateCount();
+                        });
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const funFactsSection = document.getElementById('fun-facts');
+            if(funFactsSection) {
+                counterObserver.observe(funFactsSection);
+            }
+
+            // Sticky Navbar
+            const nav = document.getElementById('mainNav');
+            if(nav) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+                });
+            }
+        }";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("eval", script);
+            await JSRuntime.InvokeVoidAsync("initAnimations");
+        }
+    }
+}
